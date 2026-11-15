@@ -2,6 +2,7 @@
   id: Saltern
   mapName: 'Saltern'
   mapPath: /Maps/saltern.yml
+  planet: Saltern
   minPlayers: 0
   maxPlayers: 35
   fallback: true
@@ -60,3 +61,22 @@
             Musician: [ 0, 1 ]
             # Silicon (2)
             Borg: [ 0, 2 ]
+
+- type: planetMap
+  id: Saltern
+  biome: Grasslands
+  markerLayers:
+  - OreIron
+  - OreCoal
+  - OreDiamond
+  effects:
+  - !type:ModifyStatusEffect
+    effectProto: WeatherRain
+    time: null
+    type: Add
+  atmosphere:
+    volume: 2500
+    temperature: 290
+    moles:
+    - 21.824879
+    - 82.10312

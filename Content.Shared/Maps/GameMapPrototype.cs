@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Diagnostics;
+using Content.Shared.Planets;
 using Content.Shared.Station;
 
 namespace Content.Shared.Maps;
@@ -31,6 +32,12 @@ public sealed partial class GameMapPrototype : IPrototype
 
     [DataField]
     public bool RandomRotation = true;
+
+    /// <summary>
+    /// A planet map prototype to initialize the map with.
+    /// </summary>
+    [DataField]
+    public ProtoId<PlanetMapPrototype>? Planet;
 
     /// <summary>
     /// Name of the map to use in generic messages, like the map vote.
